@@ -2,9 +2,7 @@
 /.ipynb_checkpoints
 
 # Large datasets
-**/data/transactions_data.csv
-**/data/train_fraud_labels.json
+**/data/
 
 # Postgres data
 **/postgres_data/
-E07 - ETL (OpenRefine)/.DS_Store
