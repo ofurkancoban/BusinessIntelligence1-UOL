@@ -87,7 +87,8 @@ erDiagram
 **Schema Summary:**
 
 - **Fact Table:** `fact_transactions` (transaction_id, amount, timestamp, is_fraud)
-- **Dimension Tables:**
+- 
+-  **Tables:**
   - `dim_client`: (client_id, yearly_income, credit_score, age)
   - `dim_card`: (card_id, card_brand, card_type, limit)
   - `dim_merchant`: (merchant_id, mcc, merchant_state)

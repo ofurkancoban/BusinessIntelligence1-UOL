@@ -4,17 +4,17 @@
 
 # Part 1: Initial Data Analysis & Verification
 
-## 📊 Executive Summary
+## Executive Summary
 
 **Report Date**: 2026-01-27
 **Database**: transaction_analytics
 **Total Transactions**: 13,305,915
 **Data Period**: 2010-2019
-**Status**: ✅ **VERIFIED**
+**Status**: **VERIFIED**
 
 ---
 
-## ✅ KPI #1: Transaction Count by Time Period
+## KPI #1: Transaction Count by Time Period
 
 ### **Yearly Breakdown**
 
@@ -33,9 +33,9 @@
 
 **Key Insights**:
 
-- ✅ Steady growth from 2010-2017 (~13% total growth)
-- ⚠️ 2019 shows lower volume (likely partial year data)
-- ✅ Data consistency verified across all years
+- Steady growth from 2010-2017 (~13% total growth)
+- 2019 shows lower volume (likely partial year data)
+- Data consistency verified across all years
 
 ### **Monthly Breakdown (Sample)**
 
@@ -50,9 +50,9 @@
 
 **Key Insights**:
 
-- ✅ Consistent monthly volumes (~100K transactions/month)
-- ✅ No missing months detected
-- ✅ Seasonal patterns visible
+- Consistent monthly volumes (~100K transactions/month)
+- No missing months detected
+- Seasonal patterns visible
 
 ### **Weekly Breakdown (Sample)**
 
@@ -66,21 +66,21 @@
 
 **Key Insights**:
 
-- ✅ Consistent weekly volumes (~23K transactions/week)
-- ✅ No gaps in weekly data
-- ✅ Daily average ~3,300 transactions
+- Consistent weekly volumes (~23K transactions/week)
+- No gaps in weekly data
+- Daily average ~3,300 transactions
 
 ---
 
-## 💰 KPI #2: Highest Revenue Merchant Category
+## KPI #2: Highest Revenue Merchant Category
 
 ### **Top 10 MCCs by Total Transaction Amount**
 
 | Rank | MCC  | Description                      | Transactions | Total Amount                      | Avg Amount |
 | ---- | ---- | -------------------------------- | ------------ | --------------------------------- | ---------- |
-| 🥇 1 | 4829 | **Money Transfer**         | 589,140      | **$53,158,515.64** | $90.23 |            |
-| 🥈 2 | 5411 | Grocery Stores, Supermarkets     | 1,592,584    | $40,970,754.15 | $25.73           |            |
-| 🥉 3 | 5300 | Wholesale Clubs                  | 602,449      | $37,727,962.09 | $62.62           |            |
+| 1 | 4829 | **Money Transfer**         | 589,140      | **$53,158,515.64** | $90.23 |            |
+| 2 | 5411 | Grocery Stores, Supermarkets     | 1,592,584    | $40,970,754.15 | $25.73           |            |
+| 3 | 5300 | Wholesale Clubs                  | 602,449      | $37,727,962.09 | $62.62           |            |
 | 4    | 5912 | Drug Stores and Pharmacies       | 772,913      | $35,113,527.69 | $45.43           |            |
 | 5    | 5541 | Service Stations                 | 1,424,711    | $29,570,426.66 | $20.76           |            |
 | 6    | 4900 | Utilities - Electric, Gas, Water | 242,993      | $27,650,038.08 | $113.79          |            |
@@ -93,21 +93,21 @@
 
 **Key Metrics**:
 
-- 🏆 **Total Amount**: $53,158,515.64
-- 📊 **Transaction Count**: 589,140
-- 💵 **Average Transaction**: $90.23
-- 📈 **Market Share**: 15.8% of total revenue
+- **Total Amount**: $53,158,515.64
+- **Transaction Count**: 589,140
+- **Average Transaction**: $90.23
+- **Market Share**: 15.8% of total revenue
 
 **Analysis**:
 
-- ✅ Highest revenue despite being only 4.4% of total transactions
-- ✅ High average transaction value ($90.23 vs overall avg $25-30)
-- ⚠️ Potential fraud risk category (money transfers)
-- 💡 Strategic importance for business
+- Highest revenue despite being only 4.4% of total transactions
+- High average transaction value ($90.23 vs overall avg $25-30)
+- Potential fraud risk category (money transfers)
+- Strategic importance for business
 
 ---
 
-## 🔌 KPI #3: Utilities Category Analysis (MCC 4900)
+## KPI #3: Utilities Category Analysis (MCC 4900)
 
 ### **Detailed Statistics**
 
@@ -135,9 +135,9 @@
    - Consistent with recurring billing pattern
 3. **Data Quality**:
 
-   - ✅ Negative values present (refunds/credits)
-   - ✅ Reasonable max value ($623.56)
-   - ✅ No outliers detected
+   - Negative values present (refunds/credits)
+   - Reasonable max value ($623.56)
+   - No outliers detected
 4. **Business Significance**:
 
    - Essential service category
@@ -148,7 +148,7 @@
 
 # Part 2: Income Analysis
 
-## 📊 KPI Questions
+## KPI Questions
 
 ### **Question 1: Average Yearly Income for All Clients**
 
@@ -176,7 +176,7 @@ FROM dim_client;
 
 **Key Insights**:
 
-- ✅ Average income: **$45,715.88**
+- Average income: **$45,715.88**
 - Wide income range ($1 - $307K)
 - High standard deviation indicates diverse client base
 - Median likely lower than mean (income distribution typically right-skewed)
@@ -214,7 +214,7 @@ WHERE c.client_id IN (
 
 **Key Insights**:
 
-- ✅ Average income: **$43,789.17**
+- Average income: **$43,789.17**
 - Only 60 clients (3%) have more than 2 cards
 - Lower average income than overall population
 - Narrower income range ($22K - $114K)
@@ -222,7 +222,7 @@ WHERE c.client_id IN (
 
 ---
 
-## 📈 Comparative Analysis
+## Comparative Analysis
 
 ### **Income Comparison**
 
@@ -245,7 +245,7 @@ WHERE c.client_id IN (
 
 # Part 3: Additional KPI Analysis (Debt, Security & Demographics)
 
-## 📊 New KPI Questions & Answers
+## New KPI Questions & Answers
 
 ### **Question 1: Top 10 Clients by Total Debt**
 
@@ -325,13 +325,13 @@ ORDER BY cd.card_on_dark_web;
 
 #### **Key Findings**:
 
-⚠️ **Important Discovery**: NO cards are flagged as being on the dark web!
+**Important Discovery**: NO cards are flagged as being on the dark web!
 
 **Implications**:
 
-1. ✅ **Good Security**: No compromised cards in dataset
-2. ✅ **Data Quality**: All cards marked as "No"
-3. 💡 **Comparison Not Possible**: Cannot compare "Yes" vs "No" groups
+1. **Good Security**: No compromised cards in dataset
+2. **Data Quality**: All cards marked as "No"
+3. **Comparison Not Possible**: Cannot compare "Yes" vs "No" groups
 
 **Average Credit Limit (All Cards)**: **$14,347.49**
 
@@ -383,7 +383,7 @@ ORDER BY c.gender;
 
 # Part 4: Final KPI Analysis
 
-## 📊 Final KPI Questions & Answers
+## Final KPI Questions & Answers
 
 ### **Question 1: Average Debt for Near-Retirement Clients**
 
@@ -534,7 +534,7 @@ ORDER BY credit_tier;
 
 # Part 5: Core Business Metrics & Custom KPI Analysis
 
-## 📊 Core Metrics - Questions & Answers
+## Core Metrics - Questions & Answers
 
 ### **Question 1: Total Transaction Volume**
 
